@@ -1,0 +1,21 @@
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.logo {
+  will-change: filter;
+  transition: scale 300ms;
+}
+.logo:hover {
+  scale: 1.1;
+}
+
+.formWrapper {
+  border: 1px solid green;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 600px;
+}
+
