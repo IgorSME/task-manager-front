@@ -59,7 +59,7 @@ export const useAxiosConfig = (store: Store) => {
       if (err.response?.status === 401 && !originalConfig?._retry) {
         originalConfig._retry = true;
         try {
-          const { data } = await axiosRefreshIstanse.get<MyData>('auth/refresh-token');
+          const { data } = await axiosRefreshIstanse.get<MyData>('api/users/refresh-token');
           const accessToken = data?.accessToken;
           if (originalConfig && originalConfig.headers) {
             originalConfig.headers.Authorization = `Bearer ${accessToken}`;
